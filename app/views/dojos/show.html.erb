@@ -1,0 +1,29 @@
+<h1>Dojo Info</h1>
+<table>
+  <thead>
+    <tr>
+      <td>Coding dojo Branch</td>
+      <td>Street</td>
+      <td>City</td>
+      <td>State</td>
+    </tr>
+  </thead>
+  <tbody>
+    <form action="/dojos/<%= @dojo.id %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="submit" value="Delete Dojo"> 
+    
+   
+    <tr>
+      <td><%= @dojo.branch %></td>
+      <td><%= @dojo.street%></td>
+      <td><%= @dojo.city %></td>
+      <td><%= @dojo.state %></td>
+    </tr>
+
+    <a href="/dojos/<%=@dojo.id %>/edit">Edit Dojo</a>
+   
+  
+  </tbody>
+</table>

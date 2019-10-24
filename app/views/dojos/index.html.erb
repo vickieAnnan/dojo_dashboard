@@ -1,0 +1,23 @@
+<h1>All the Dojos</h1>
+<a href="/dojos/new">New Dojo</a>
+<table style="width:100%">
+    <tr>
+        <th>Coding Dojo Branch</th>
+        <th>Street</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Actio</th>
+    </tr>
+
+    <% @dojos.each do |a| %>
+    <tr>
+        <td><a href="/dojos/<%= a.id %>"><%= a.branch %></a></td>
+        <td><%= a.street %></td>
+        <td><%= a.city %></td>
+        <td><%= a.state %></td>
+    </tr>
+    <%end%>
+
+
+
+</table>
